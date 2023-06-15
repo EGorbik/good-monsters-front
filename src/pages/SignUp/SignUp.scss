@@ -1,0 +1,45 @@
+@import 'src/common/styles/mixins';
+@import 'src/common/styles/variables';
+
+.SignUp {
+
+  &_Form {
+    @include flex(column, start, center);
+    min-height: 100%;
+
+    &_Title {
+      @include text(29px, 24px, 600);
+      color: $textColor-l4;
+      margin-top: 57px;
+      margin-bottom: 0;
+    }
+
+    &_Description {
+      @include text(19px, 16px, 400);
+      color: $textColor-l4;
+      margin-top: 10px;
+      margin-bottom: 38px;
+    }
+
+    &_Input {
+      width: 500px;
+    }
+
+    &_Submit {
+      margin-top: 55px;
+    }
+
+    &_Login {
+      @include text(19px, 16px, 500);
+      color: $textColor-l3;
+      margin-top: 53px;
+      margin-bottom: 20px;
+
+      a {
+        color: $textColor-l6;
+        text-decoration: none;
+        @include hover(.1s, .8);
+      }
+    }
+  }
+}

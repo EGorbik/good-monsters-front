@@ -1,0 +1,54 @@
+@import 'common/styles/mixins';
+@import 'common/styles/variables';
+
+.Login {
+  &_Form {
+    @include flex(column, start, center);
+    min-height: 100%;
+
+    &_Title {
+      @include text(29px, 24px, 600);
+      color: $textColor-l4;
+      margin-top: 85px;
+      margin-bottom: 0;
+    }
+
+    &_Description {
+      @include text(19px, 16px, 400);
+      color: $textColor-l4;
+      margin-top: 5px;
+      margin-bottom: 49px;
+    }
+
+    &_Input {
+      width: 500px;
+    }
+
+    &_Submit {
+      margin: 19px 0;
+    }
+
+    &_Restore {
+      @include text(19px, 16px, 600);
+      color: $iconColor;
+      border-bottom: 1px dashed $iconColor;
+      text-decoration: none;
+      @include hover(.1s, .8);
+    }
+  }
+
+  &_SignUp {
+    @include text(19px, 16px, 500);
+    color: $textColor-l3;
+    position: absolute;
+    bottom: 45px;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    a {
+      color: $textColor-l6;
+      text-decoration: none;
+      @include hover(.1s, .8);
+    }
+  }
+}

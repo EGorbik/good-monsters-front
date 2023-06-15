@@ -1,0 +1,75 @@
+@import 'src/common/styles/mixins';
+@import 'src/common/styles/variables';
+
+.ConfirmationCode {
+  &_Arrow {
+    margin-top: 50px;
+    margin-left: 55px;
+    cursor: pointer;
+    transition: all 0.1s, opacity 0.2s linear;
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+
+  &_Form {
+    @include flex(column, start, center);
+    min-height: 100%;
+
+    &_Title {
+      @include text(29px, 24px, 600);
+      color: $textColor-l3;
+      margin-top: 68px;
+      margin-bottom: 0;
+    }
+
+    &_Description {
+      @include text(19px, 16px, 400);
+      color: $textColor-l3;
+      margin-top: 5px;
+      width: 490px;
+      height: 31px;
+      text-align: center;
+    }
+
+    .pincode-input-container {
+      margin-top: 46px;
+
+      .pincode-input-text {
+        box-sizing: border-box;
+        margin: 0 20px 0 0 !important;
+        text-align: center;
+        border: 1px solid $lineColor-l1 !important;
+        background: transparent;
+        @include text(19px, 16px, 400);
+        width: 43px !important;
+        height: 50px;
+        border-radius: 10px;
+
+        &:last-child {
+          margin: 0 !important;
+        }
+        &:focus {
+          border-color: $iconColor!important;
+          outline: none;
+          box-shadow: none;
+        }
+      }
+    }
+
+    &_Submit {
+      margin-top: 73px;
+    }
+
+    &_Resend {
+      @include text(19px, 16px, 600);
+      color: $iconColor;
+      border-bottom: 1px dashed $iconColor;
+      text-decoration: none;
+      margin-top: 20px;
+      @include hover(.1s, .8);
+      cursor: pointer;
+    }
+  }
+}

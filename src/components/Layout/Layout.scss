@@ -1,0 +1,34 @@
+@import 'common/styles/mixins';
+@import 'common/styles/variables';
+
+.Layout {
+  @include flex(row, start, start);
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow-y: auto;
+  scroll-margin-block-start: 65px;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-track {
+    scroll-margin-block-start: 65px;
+    //margin-top: 65px;
+   margin-bottom: 20px;
+  }
+  &::-webkit-scrollbar-thumb {
+    box-shadow: inset 10px 10px 10px $mainColor;
+    height: 606px;
+    border-radius: 10px;
+  }
+
+  &_Content {
+    width: calc(100% - 300px);//100% - sidebar
+
+    &_Children {
+      margin: 0 35px 20px 45px;
+    }
+  }
+}

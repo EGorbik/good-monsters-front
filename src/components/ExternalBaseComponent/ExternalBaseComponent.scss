@@ -1,0 +1,63 @@
+@import 'common/styles/mixins';
+@import 'common/styles/variables';
+
+.ExternalBaseComponent {
+  @include flex(row, center, center);
+  height: 100vh;
+
+  &_Logo {
+    width: 656px;
+    margin: 175px 156px 0 40px;
+
+    @media screen and (max-width: 1600px) {
+      margin: 175px 50px 0 20px;
+    }
+
+    @media screen and (max-width: 1535px) {
+      margin: 175px 20px 0 20px;
+    }
+  }
+
+  &_Children {
+    margin: 100px 120px 0 0;
+    position: relative;
+    width: 610px;
+    min-height: 780px;
+    background-color: $backgroundColor-l3;
+    box-shadow: 0 21px 58px rgba(9, 0, 72, 0.2);
+    border-radius: 20px;
+
+    @media screen and (max-width: 1535px) {
+      margin: 100px 20px 0 0;
+    }
+
+    &_Header {
+      @include flex(row, center, center);
+      margin-top: 91px;
+
+      img {
+        width: 30px;
+        overflow: hidden;
+      }
+
+      h3 {
+        @include text(24px, 22px, 400);
+        letter-spacing: 1px;
+        color: $textColor-l2;
+        margin: 0;
+        text-transform: uppercase;
+
+        strong {
+          @include text(24px, 22px, 900);
+        }
+      }
+    }
+
+    &_Error {
+      @include text(19px, 16px, 600);
+      color: $errorColor;
+      text-align: center;
+      margin-top: 10px;
+    }
+  }
+}

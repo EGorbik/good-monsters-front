@@ -1,0 +1,21 @@
+@mixin flex( $flexDirection, $justifyContent, $alignItems) {
+  display: flex;
+  flex-direction: $flexDirection;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+}
+
+@mixin text( $lineHeight, $fontSize, $fontWeight) {
+  font-family: Inter, sans-serif;
+  line-height: $lineHeight;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+}
+
+@mixin hover ($delay, $opacity) {
+  transition: all $delay, opacity 0.2s linear;
+
+  &:hover {
+    opacity: $opacity;
+  }
+}
